@@ -1,5 +1,5 @@
 #!/usr/local/bin/python2.7
-"""Usage: get_heise_sec_headline.py
+"""Usage: get_heise_sec_headlines.py
 
    Options:
         -h, --help  print help message
