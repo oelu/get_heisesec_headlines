@@ -26,7 +26,8 @@ def get_heise_sec_headlines(tree):
     """
     gets heise security headlines
     """
-    headlines = tree.xpath('//*[@id="mitte_links"]/div/div/div/section/header/h3/a/text()')
+    xpath = '//*[@id="mitte_links"]/div/div/div/section/header/h3/a/text()'
+    headlines = tree.xpath(xpath)
     return headlines
 
 
@@ -34,8 +35,7 @@ def main():
     """
     main function
     """
-    # gets arguments from docopt
-    arguments = docopt(__doc__)
+    docopt(__doc__)
     endpoint = 'http://www.heise.de/security/'
     tree = get_lxml_tree(endpoint)
     headlines = get_heise_sec_headlines(tree)
