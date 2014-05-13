@@ -10,7 +10,6 @@ __author__ = 'olivier'
 from docopt import docopt
 from lxml import html
 import requests
-from pprint import pprint
 
 
 def get_lxml_tree(endpoint):
@@ -37,12 +36,12 @@ def main():
     """
     # gets arguments from docopt
     arguments = docopt(__doc__)
-    print arguments
     endpoint = 'http://www.heise.de/security/'
     tree = get_lxml_tree(endpoint)
     headlines = get_heise_sec_headlines(tree)
     for headline in headlines:
-        print headline
+        # todo: check if elem is dict to avoid printing of {}
+            print headline
 
 
 if __name__ == "__main__":
