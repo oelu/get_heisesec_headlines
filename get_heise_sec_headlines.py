@@ -40,8 +40,7 @@ def main():
     tree = get_lxml_tree(endpoint)
     headlines = get_heise_sec_headlines(tree)
     for headline in headlines:
-        # todo: check if elem is dict to avoid printing of {}
-            print headline
+        print headline
 
 
 if __name__ == "__main__":
